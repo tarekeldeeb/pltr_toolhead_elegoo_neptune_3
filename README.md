@@ -1,38 +1,37 @@
-# pltr V2 Toolhead
-A 3D Printable Pen Plotter Toolhead for the Creality Ender 3 3D Printer
+# Elegoo Neptune 3 Pro – Pen Plotter Toolhead (based on pltr_toolhead)
 
-![](https://user-images.githubusercontent.com/46334898/128649957-7d06d25b-531f-4710-9f95-27e0e3231868.jpeg)
+Turn your Elegoo Neptune 3 Pro into a precise pen plotter. This is a remix of pltr_toolhead with updated mounts and clearances for the Neptune 3 Pro.
 
+## Highlights
+- Spring-loaded pen carriage (consistent pressure)
+- Zero firmware changes required (uses Z for pen up/down)
+- Works with Inkscape → G-code (or the included `svg2gcode.py`)
 
-**Originally launched as a [product on Tindie](https://www.tindie.com/products/andrew_sink/pltr-v2-pen-plotter-toolhead/), I've since decided to release it for free! If you still want to support this project, you can [buy me a coffee on Ko-Fi!](https://ko-fi.com/andrewsink)**
+## Quick Start
+1. Print `hardware/stl/*.stl` (0.2 mm, 3 perimeters, 30% gyroid).
+2. Assemble and calibrate (see `docs/`).
+3. Tape A4 paper to the bed, home (`G28`), jog Z until pen just touches paper, then `G92 Z0`.
+4. Plot a test: `examples/*.gcode`.
 
-The pltr v2 is a 3D printed pen plotter toolhead that is designed to mount on the [Creality Ender 3 Pro](https://amzn.to/37qF5zg) and [Creality Ender 3 V2](https://amzn.to/3s4fB4s) 3D printers. [Installing the pltr is simple](https://youtu.be/c1Wo9KkZKNQ), and only requires three flathead bolts to attach to your printer. 
+## Conventions
+- Pen up: `G1 Z5 F1200`
+- Pen down: `G1 Z0 F600`
+- Travel feed: 3000–6000; draw feed: 800–2000 (depends on pen)
 
-The [User Guide .PDF](https://github.com/AndrewSink/pltr/blob/main/pltr%20v2%20User%20Guide%20Rev%20C.2.pdf) contains all of the information you should need to get starter with your pltr toolhead. Once the pltr toolhead has been installed, you can use the included .gcode files to calibrate your machine. 
+## Vector → G-code
+- PDF→SVG: `inkscape --export-plain-svg=out.svg input.pdf`
+- SVG→G-code: `python software/svg2gcode.py out.svg --out plot.gcode`
+
+## Licenses
+- Hardware: CERN-OHL-S v2 (see `LICENSE-HW`)
+- Docs: CC-BY-4.0 (see `LICENSE-DOCS`)
+
 
 You can also find the full build instructions on YouTube: https://youtu.be/c1Wo9KkZKNQ
 
-
 https://user-images.githubusercontent.com/46334898/128704015-6d35a433-be92-40f1-b036-9eccbbc82462.mp4
 
-## Mounting Hardware Required:
-
-- 2x [M3x40 Bolt](https://www.mcmaster.com/91292A024)
-- 2x [M3 Locking Nut](https://www.mcmaster.com/90576A102)
-- 3x [M3x10 Flathead Bolt](https://www.mcmaster.com/92125A130)
-- 4x [M4x15 Mushroom Cap Bolt](https://www.mcmaster.com/92095A125)
-- 2x [Springs](https://www.mcmaster.com/9657K627)
-- 4x [Binder Clips](https://amzn.to/3lKdcdM)
-- 1x [2mm Allen Key](https://www.mcmaster.com/7289A12)
-- 1x [2.5mm Allen Key](https://www.mcmaster.com/7289A13)
-
 ![](https://user-images.githubusercontent.com/46334898/128649924-20f4fdde-0154-433b-928d-fcd76984723f.jpeg)
-
-The pltr has four mounting points: two fixed and two spring-loaded, so you can experiment with a wide variety of writing implements, pens, brushes, and more!
-
-Designed and manufactured in Charlotte, North Carolina using [GreenGate3D recycled PETG](https://greengate3d.com/?ref=fpowfUvprmSUI).
-
-Read about the [pltr v2 on 3DWithUs](https://3dwithus.com/pltr-pen-plotter-toolhead-for-3d-printers-3d-art-images).
 
 https://user-images.githubusercontent.com/46334898/128702978-db2b59bf-4a6f-4ef1-8289-b92065d79d5a.mp4
 
