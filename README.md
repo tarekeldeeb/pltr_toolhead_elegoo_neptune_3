@@ -26,12 +26,6 @@ Turn your Elegoo Neptune 3 Pro into a precise pen plotter. This is a remix of pl
 - Hardware: CERN-OHL-S v2 (see `LICENSE-HW`)
 - Docs: CC-BY-4.0 (see `LICENSE-DOCS`)
 
-
-You can also find the full build instructions on YouTube: https://youtu.be/c1Wo9KkZKNQ
-
 https://user-images.githubusercontent.com/46334898/128704015-6d35a433-be92-40f1-b036-9eccbbc82462.mp4
 
-![](https://user-images.githubusercontent.com/46334898/128649924-20f4fdde-0154-433b-928d-fcd76984723f.jpeg)
-
-https://user-images.githubusercontent.com/46334898/128702978-db2b59bf-4a6f-4ef1-8289-b92065d79d5a.mp4
 
