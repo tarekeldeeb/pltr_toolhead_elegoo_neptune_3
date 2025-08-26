@@ -1,4 +1,4 @@
-# Elegoo Neptune 3 Pro – Pen Plotter Toolhead (based on pltr_toolhead)
+# Elegoo Neptune 3 Pro – Pen Plotter Toolhead
 
 Turn your Elegoo Neptune 3 Pro into a precise pen plotter. This is a remix of pltr_toolhead with updated mounts and clearances for the Neptune 3 Pro.
 
